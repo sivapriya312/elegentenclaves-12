@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products-ElegentEnclaves</title>
+    <link rel="shortcut icon" href="img/Screenshot 2023-12-17 175300.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+ <div class="container">
+        <div class="nav">
+        <div class="logo">
+            <img src="img/logs.png" width="200px">
+        </div>
+        <nav>
+           <ul id="Menuitems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+           </ul>
+        </nav>
+        <img src="img/iconarchivecart.png" width="30px" height="30px">
+         <img src="img/Very-Basic-Menu-icon.png" class="menuicon" width=30px height="30px" onclick="menutoggle()">
+    </div>
+ </div>
+ <!--- accountpg-->
+ <div class="account-page">
+    <div class="contaniner">
+        <div class="row">
+            <div class="all2">
+                <img src="img/homedec.png" width="100%">
+            </div>
+            <div class="all2">
+                 <div class="form-container">
+                    <div class="form-btun">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <br>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password"placeholder="Password">
+                        <button type="Submit" class="btun">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password"placeholder="Password" >
+                        <button type="Submit" class="btun">Register</button>
+                    </form>
+
+                 </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!-----footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-all1">
+                <h3>Download our app</h3>
+                <p>Download app for android and ios mobile</p>
+                <div class="applogo">
+                    <img src="img/googgleplY@@.png">
+                      <img src="img/appstore@@.png">
+                </div>
+            </div>
+            <div class="footer-all2">
+                <img src="img/logs.png" alt="">
+                <p>"Our Promise is to Inspire, Transform, and Create Timeless Spaces that Reflect Your Unique Story and Style. Your Home, Your Haven - Trust Us to Bring Your Vision to Life."</p>
+            </div>
+            <div class="footer-all3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Return policy</li>
+                    <li>join affililate</li>
+                </ul>
+            </div>
+            <div class="footer-all4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2020- eleganteclaves</p>
+    </div>
+</div>
+<!----js for menutoogle-->
+<script>
+    var Menuitems= document.getElementById("Menuitems")
+    Menuitems.style.maxHeight="0px"
+    function menutoggle(){
+        if(Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px";
+        }
+        else{
+            Menuitems.style.maxHeight="0px";
+        }
+    }
+</script>
+<!----js for form-->
+<script>
+    var LoginForm= document.getElementById("LoginForm");
+    var RegForm= document.getElementById("RegForm");
+    var Indicator= document.getElementById("Indicator");
+    function register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+
+</script>
+</body>
+</html>
